@@ -4,15 +4,16 @@ USER = 'dulingkang'
 
 ROOT_PATH = '/home/' + USER
 TMP_PATH = ROOT_PATH + '/tmp'
-COM_PATH = ROOT_PATH + 'app/pycom'
+COM_PATH = ROOT_PATH + '/app/pycom'
 
-server = Connection('sky', USER)
+server = Connection('47.111.166.10', USER)
 
 
 @task
-def deploy():
-    print('拉取代码...')
+def deploy(context):
+    print('开始部署...')
     with server.cd(COM_PATH):
         server.run(f'git pull origin main')
-        server.run(f'supervisorctl restart pycom')
+        server.run(f'sudo supervisorctl restart pycom')
+    print('部署完成...')
 
