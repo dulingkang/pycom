@@ -1,7 +1,7 @@
 import os
 import tornado.options
 import tornado.httpserver
-from handler import route
+from pycom.handler import route
 from tornado.options import options, define
 
 

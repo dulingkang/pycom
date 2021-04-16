@@ -1,5 +1,5 @@
-from core.store import store
-from model import BaseModel
+from pycom.core.store import store
+from pycom.model import BaseModel
 
 
 class Commodity(BaseModel):

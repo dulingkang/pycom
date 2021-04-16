@@ -1,6 +1,6 @@
 import threading
 import pymysql
-from setting import MYSQL
+from pycom.setting import MYSQL
 
 
 class Store(object):

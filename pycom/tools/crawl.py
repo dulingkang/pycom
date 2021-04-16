@@ -2,16 +2,16 @@ import requests
 import sys
 import os
 
-sys.path.append(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
-from model.commodity import Commodity
+sys.path.append(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
+from pycom.model.commodity import Commodity
 
 
 
 SQKB_URL = 'https://www.sqkb.com/g/getCouponTopicList'
 
 
-def crawl(page=2, cid=2):
+def crawl(page=1, cid=2):
     params = {
         'sort': 0,
         'cid': cid,

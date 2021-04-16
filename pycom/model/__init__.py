@@ -1,4 +1,4 @@
-from core.store import store
+from pycom.core.store import store
 from datetime import datetime
 
 

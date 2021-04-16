@@ -1,7 +1,7 @@
 from tornado.web import url, StaticFileHandler
 
 route_modules = [
-    'handler.commodity'
+    'pycom.handler.commodity'
 ]
 
 
